@@ -3,10 +3,13 @@
     src: url('../fonts/SourceSansPro-Regular.ttf');
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif !important;
 }
 
 body {
@@ -70,48 +73,63 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
-.container img{
+
+.container img {
     height: 25%;
     width: 100%;
-   
+
 }
-.container{
+
+.container {
     margin-top: 20px;
     width: 100%;
     /* background-color: rgba(7, 18, 57,0.7);    */
 }
-h1{
+
+h1 {
     text-align: center;
     color: #8994ed;
     pointer-events: none;
     animation-name: souligne;
     margin-bottom: 1.2em;
     padding-top: 2.5em;
-  
+
 }
 
 
 .container h1 {
-    font-size: 4em;
+    font-size: 3.5em;
     color: #1e98c4;
     overflow: hidden;
     text-align: center;
     white-space: nowrap;
     margin: 0 auto;
     animation: typing 4s steps(60, end), blink-caret .5s step-end infinite;
-  }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-  }
-  .container{
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}
+
+.container {
     margin: 0 auto;
     width: 100%;
-  }
-  
+}
