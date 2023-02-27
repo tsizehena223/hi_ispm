@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body onload="OnLoad()">
+
+    <div id="idContainer">
+        <label id="lblSpeak"><input id="chkSpeak" type="checkbox" 
+            onclick="SpeechToText()" />Ecoute</label>
+        <label id="lblMute"><input id="chkMute" type="checkbox" 
+            onclick="Mute(this.checked)"/>Mute</label>
+        <textarea id="txtOutput" rows="5" style="margin-top: 10px; width: 95%;" 
+         placeholder="Votre discussion..."></textarea>
+
+        <div>
+            <select id="selModel">
+                <option value="text-davinci-003">text-davinci-003</option>
+                <option value="text-davinci-002">text-davinci-002</option>
+                <option value="code-davinci-002">code-davinci-002</option>
+            </select>
+
+            <select id="selLang" onchange="ChangeLang(this)">
+                <option value="en-US">English (United States)</option>
+                <option value="fr-FR">French (France)</option>
+                <option value="ru-RU">Russian (Russia)</option>
+                <option value="pt-BR">Portuguese (Brazil)</option>
+                <option value="es-ES">Spanish (Spain)</option>
+                <option value="de-DE">German (Germany)</option>
+                <option value="it-IT">Italian (Italy)</option>
+                <option value="pl-PL">Polish (Poland)</option>
+                <option value="nl-NL">Dutch (Netherlands)</option>
+            </select>
+
+            <select id="selVoices"></select>
+        </div>
+
+        <textarea id="txtMsg" rows="5" wrap="soft" style="width: 95%;"  placeholder="Ecris ici ce que vous voulez discuter..."></textarea>
+        <button type="button" onclick="Send()" id="btnSend">Send</button>
+        <div id="idText"></div>
+    </div>
+
+</body>
+</html>
