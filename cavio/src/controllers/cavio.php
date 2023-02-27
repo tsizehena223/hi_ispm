@@ -27,4 +27,4 @@ $questions =
     ['A', "L’inconnu ne me fait pas peur"]
 ];
 
-require_once 'src/templates/plateformeGame.php' ?>
+require_once 'src/templates/plateformeGame.php';

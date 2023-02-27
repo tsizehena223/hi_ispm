@@ -10,7 +10,7 @@
                         <?php $i = 0 ?>
                         <?php foreach ($questions as $test):?>
                         <li>
-                            <strong><?= $test[0] . ' ' ?></strong><?= $test[1] ?><br>
+                            <?= $test[1] ?><br>
                             <input type="radio" name="<?= $test[0] . $i ?>" value="1" required><span style="<?= $style ?>">1</span> <br>
                             <input type="radio" name="<?= $test[0] . $i ?>" value="2" required><span style="<?= $style ?>">2</span> <br>
                             <input type="radio" name="<?= $test[0] . $i ?>" value="3" required><span style="<?= $style ?>">3</span> <br>
