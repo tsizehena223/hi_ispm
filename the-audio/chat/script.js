@@ -1,5 +1,4 @@
-// var OPENAI_API_KEY = "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";
-var OPENAI_API_KEY = "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";
+var OPENAI_API_KEY = "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";
 var bTextToSpeechSupported = false;
 var bSpeechInProgress = false;
 var oSpeechRecognizer = null
