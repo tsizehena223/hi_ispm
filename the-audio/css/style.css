@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'source sans pro';
+    src: url('../fonts/SourceSansPro-Regular.ttf');
+}
+
+*, *::after, *::before {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'source sans pro';
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 1rem 7rem;
+    background-color: #064e8989;
+    box-shadow: -3px 0px 3px #9f9f9f63;
+    z-index: 1;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 3px 2px 3px #064e8941,
+        -2px -1px 3px #064e8941;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 2rem;
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #1c99ffce;
+    text-shadow: 0px 3px #064e8941;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #1c99ffce;
+    display: block;
+    transition: all .5s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+.container img{
+    height: 25%;
+    width: 100%;
+   
+}
+.container{
+    margin-top: 20px;
+    width: 100%;
+    /* background-color: rgba(7, 18, 57,0.7);    */
+}
+h1{
+    text-align: center;
+    color: #8994ed;
+    pointer-events: none;
+    animation-name: souligne;
+    margin-bottom: 1.2em;
+    padding-top: 2.5em;
+  
+}
+
+
+.container h1 {
+    font-size: 4em;
+    color: #1e98c4;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 4s steps(60, end), blink-caret .5s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+  .container{
+    margin: 0 auto;
+    width: 100%;
+  }
+  
