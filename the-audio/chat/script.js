@@ -1,4 +1,5 @@
-var OPENAI_API_KEY = "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";
+// var OPENAI_API_KEY = "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";
+var OPENAI_API_KEY = "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";
 var bTextToSpeechSupported = false;
 var bSpeechInProgress = false;
 var oSpeechRecognizer = null
@@ -73,30 +74,30 @@ function Send() {
                 if (s == "") s = "No response";
                 txtOutput.value += "Chat GPT: " + s;
                 TextToSpeech(s);
-            }            
+            }
         }
     };
 
     var sModel = selModel.value;// "text-davinci-003";
     var iMaxTokens = 2048;
     var sUserId = "1";
-    var dTemperature = 0.5;    
+    var dTemperature = 0.5;
 
     var data = {
         model: sModel,
         prompt: sQuestion,
         max_tokens: iMaxTokens,
         user: sUserId,
-        temperature:  dTemperature,
+        temperature: dTemperature,
         frequency_penalty: 0.0, //Number between -2.0 and 2.0  
-                                //Positive values decrease the model's likelihood 
-                                //to repeat the same line verbatim.
+        //Positive values decrease the model's likelihood 
+        //to repeat the same line verbatim.
         presence_penalty: 0.0,  //Number between -2.0 and 2.0. 
-                                //Positive values increase the model's likelihood 
-                                //to talk about new topics.
+        //Positive values increase the model's likelihood 
+        //to talk about new topics.
         stop: ["#", ";"]        //Up to 4 sequences where the API will stop 
-                                //generating further tokens. The returned text 
-                                //will not contain the stop sequence.
+        //generating further tokens. The returned text 
+        //will not contain the stop sequence.
     }
 
     oHttp.send(JSON.stringify(data));
@@ -116,8 +117,8 @@ function TextToSpeech(s) {
         var sVoice = selVoices.value;
         if (sVoice != "") {
             oSpeechSynthesisUtterance.voice = oVoices[parseInt(sVoice)];
-        }        
-    }    
+        }
+    }
 
     oSpeechSynthesisUtterance.onend = function () {
         //finished talking - can now listen
@@ -157,7 +158,7 @@ function SpeechToText() {
         }
 
         return;
-    }    
+    }
 
     oSpeechRecognizer = new webkitSpeechRecognition();
     oSpeechRecognizer.continuous = true;
@@ -179,8 +180,8 @@ function SpeechToText() {
             }
 
             var oDiv = document.getElementById("idText");
-            oDiv.innerHTML = '<span style="color: #999;">' + 
-                               interimTranscripts + '</span>';
+            oDiv.innerHTML = '<span style="color: #999;">' +
+                interimTranscripts + '</span>';
         }
     };
 
