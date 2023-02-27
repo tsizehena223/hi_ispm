@@ -25,9 +25,9 @@ function getResult($arr){
     $res = [
         'INVERTIGATEUR' => $inv, 
         'REALISTE' => $rea, 
-        'ARTISTE' => $art, 
-        'SOCIALE' => $soci, 
-        'ENTREPRENEUR' => $ent, 
+        'ARTISTIQUE' => $art, 
+        'SOCIAL' => $soci, 
+        'ENTREPRENANT' => $ent, 
         'CONVENITONNEL' => $conv
     ];
     arsort($res);
@@ -48,10 +48,15 @@ function compteur(String $s, array $arr){
     }
     return $cpt;
 }
-
-function format_result($resBest, $lien){
+function format_result($resBest){
     $best1 = $resBest[0][0];
     $best2 = $resBest[1][0];
-    echo "<a href=\"$lien\">$best1</a><br>";
-    echo "<a href=\"$lien\">$best2</a>";
+
+    // Generate Url
+    $lien1 = strtolower($best1);
+    $lien2 = strtolower($best2);
+    $lien1 = "https://www.123test.com/fr/la-personnalite-de-type-$lien1/";
+    $lien2 = "https://www.123test.com/fr/la-personnalite-de-type-$lien2/";
+    echo "<a href=\"$lien1\">$best1</a><br>";
+    echo "<a href=\"$lien2\">$best2</a>";
 }
