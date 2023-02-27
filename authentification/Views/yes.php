@@ -1,5 +1,3 @@
-<?php include '../Controllers/is_connected.php' ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
