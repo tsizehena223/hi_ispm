@@ -21,7 +21,7 @@ if (isset($_POST['connexion'])) {
             session_start();
             $_SESSION['auth'] = $nom;
             $_SESSION['flash']['success'] = "Connected successfully!";
-            header("Location: ../cavio/index.php");
+            header("Location: ../Interface/dvp.html");
         } else {
             session_start();
             $_SESSION['flash']['error'] = "Mot de passe incorrect!";
