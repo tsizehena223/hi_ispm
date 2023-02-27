@@ -14,7 +14,7 @@ if (isset($_POST['connexion'])) {
     if ($_user == null) {
         session_start();
         $_SESSION['flash']['error'] = "Utilisateur non enregistré!";
-        header("Location: ../Views/connexion_view.php");
+        header("Location: ../other-page/Login_v4/log-In.php");
     } else {
         if (password_verify($psw, $_user['password'])) {
             // die("okey");
@@ -25,7 +25,7 @@ if (isset($_POST['connexion'])) {
         } else {
             session_start();
             $_SESSION['flash']['error'] = "Mot de passe incorrect!";
-            header("Location: ../Views/connexion_view.php");
+            header("Location: ../other-page/Login_v4/log-In.php");
         }
     }
 }

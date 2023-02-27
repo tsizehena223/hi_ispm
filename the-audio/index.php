@@ -17,18 +17,17 @@
                 <li><a class="logo" href="/">
                         <img src="./img/logo.jpg" alt="logo">
                     </a></li>
-                <li><a href="#">E-ANATRA</a></li>
+                <li><a href="#">To The Top</a></li>
             </ul>
 
             <ul class="menu_navigation">
 
 
-                <li><a href="./other-page/Login_v4/inscrire.html"> S'inscrire</a></li>
-                <li><a href="./other-page/Login_v4/log-In.html"> Se connecter</a></li>
+                <li><a href="./other-page/Login_v4/inscrire.php"> S'inscrire</a></li>
+                <li><a href="./other-page/Login_v4/log-In.php"> Se connecter</a></li>
             </ul>
         </nav>
     </header>
-
 
     <div class="container">
         <p>

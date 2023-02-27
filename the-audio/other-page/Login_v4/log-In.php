@@ -30,6 +30,29 @@
 </head>
 
 <body>
+	<center>
+		<?php
+		if (session_status() == PHP_SESSION_NONE) {
+			session_start();
+		}
+		if (isset($_SESSION['flash']['error'])) :  ?>
+			<div class="alert alert-danger col-md-4">
+				<?= $_SESSION['flash']['error'] ?>
+			</div>
+		<?php
+			unset($_SESSION['flash']['error']);
+		endif;
+		?>
+		<?php
+		if (isset($_SESSION['flash']['success'])) :  ?>
+			<div class="alert alert-success col-md-4">
+				<?= $_SESSION['flash']['success'] ?>
+			</div>
+		<?php
+			unset($_SESSION['flash']['success']);
+		endif;
+		?>
+	</center>
 	<div class="content">
 		<div class="img-div">
 			<img src="../../img/Calculator-amico.png" alt="">
@@ -37,7 +60,7 @@
 		<div class="limiter">
 			<div class="container-login100">
 				<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-					<form class="login100-form validate-form">
+					<form class="login100-form validate-form" action="../../Controllers/connexionController.php" method="post">
 						<span class="login100-form-title p-b-49">
 							Connexion <br>
 						</span>
@@ -69,7 +92,7 @@
 
 						<div class="txt1 text-center p-t-54 p-b-20">
 							<span>
-								<a href="inscrire.html">S'inscrire</a>
+								<a href="inscrire.php">S'inscrire</a>
 							</span>
 						</div>
 

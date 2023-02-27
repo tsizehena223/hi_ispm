@@ -33,4 +33,4 @@ if (isset($_POST['inscription'])) {
     }
 }
 
-header('Location: ../Views/inscription_view.php');
+header('Location: ../other-page/Login_v4/inscrire.php');
